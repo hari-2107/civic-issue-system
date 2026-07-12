@@ -17,8 +17,9 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 // Set default base URL for API communication dynamically, prioritizing environment configuration
-const apiHost = typeof window !== 'undefined' ? window.location.hostname : 'localhost';
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || `http://${apiHost}:5000/api`;
+axios.defaults.baseURL =
+  import.meta.env.VITE_API_URL ||
+  "https://civic-issue-system-gt2g.onrender.com/api";
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [user, setUser] = useState<User | null>(null);
