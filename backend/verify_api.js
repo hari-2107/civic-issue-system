@@ -21,7 +21,7 @@ serverProcess.stderr.on('data', (data) => {
 setTimeout(async () => {
     let failed = false;
     try {
-        const baseUrl = 'http://localhost:5000/api';
+        const baseUrl = 'https://civic-issue-system-gt2g.onrender.com/api';
 
         // 1. Health check
         console.log('\n--- Test 1: Health Check ---');
